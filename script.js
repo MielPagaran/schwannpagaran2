@@ -35,7 +35,9 @@ createStickyNote = (text) => {
   if(index > random_colors.length - 1)
     index = 0;
 
-  note.setAttribute("style", margin:${random_margin[Math.floor(Math.random() * random_margin.length)]}; background-color:${random_colors[index++]}; transform:${random_degree[Math.floor(Math.random() * random_degree.length)]});
+  note.setAttribute("style",
+   margin:${random_margin[Math.floor(Math.random() * random_margin.length)]}; 
+  background-color:${random_colors[index++]}; transform:${random_degree[Math.floor(Math.random() * random_degree.length)]});
 
   note.addEventListener("dblclick", () => {
     note.remove();
